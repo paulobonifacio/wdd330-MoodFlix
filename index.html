@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>MoodFlix</title>
-      <link rel="stylesheet" href="css/style.css" >
+      <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
    </head>
    <body>
@@ -12,7 +12,7 @@
          <div class="header-content">
            <div class="left-content">
              <div class="logo-wrapper">
-               <img src="images/logo-moodflix.png" alt="MoodFlix Logo" class="logo-large" >
+               <img src="images/logo-moodflix.png" alt="MoodFlix Logo" class="logo-large">
                <span class="logo-text">MoodFlix</span>
              </div>
            </div>
@@ -27,15 +27,16 @@
          <section class="mood-section">
             <h2>How are you feeling?</h2>
             <div class="mood-buttons">
-               <button data-mood="happy">😊</button>
-               <button data-mood="sad">😞</button>
-               <button data-mood="excited">😄</button>
-               <button data-mood="angry">😡</button>
-               <button data-mood="scared">😨</button>
+               <button data-mood="happy" aria-label="Happy mood">😊</button>
+               <button data-mood="sad" aria-label="Sad mood">😞</button>
+               <button data-mood="excited" aria-label="Excited mood">😄</button>
+               <button data-mood="angry" aria-label="Angry mood">😡</button>
+               <button data-mood="scared" aria-label="Scared mood">😨</button>
             </div>
          </section>
          <section class="search-section">
-            <input type="text" id="searchInput" placeholder="🔍 Search for a movie or TV show" >
+            <label for="searchInput" class="visually-hidden">Search for a movie or TV show</label>
+            <input type="text" id="searchInput" placeholder="🔍 Search for a movie or TV show">
          </section>
          <section class="recommendations-section">
             <h3 id="resultsLabel">Recommendations based on your mood:</h3>
