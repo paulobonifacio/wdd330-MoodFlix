@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5F5;
+  color: #1C1C1C;
+}
+
+header {
+  background-color: #2E3A59;
+  padding: 1rem;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.left-content, .right-content {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: #F5F5F5;
+  background-color: #E94560;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #c23b50;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-large {
+  max-height: 48px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-large:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+.mood-section h2,
+.recommendations-section h3 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mood-buttons button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #E94560;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.mood-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#searchInput {
+  width: 90%;
+  max-width: 400px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.movie-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+  position: relative;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.favorite-icon.favorited {
+  color: #E94560;
+}
+
+.back-link {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.back-link a {
+  color: #2E3A59;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+}
+
+.about-section h2, 
+.about-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2E3A59;
+  margin-top: 1rem;
+}
+
+.about-section ul {
+  padding-left: 1.2rem;
+  list-style-type: square;
+}
+
+.about-section p, 
+.about-section li {
+  line-height: 1.6;
+}
+
+body.theme-joy {
+  background-color: #fff9e6;
+  color: #1C1C1C;
+}
+
+body.theme-sad {
+  background-color: #e3eaf2;
+  color: #2E3A59;
+}
+
+body.theme-anger {
+  background-color: #4b0000;
+  color: #1c1c2e;
+}
+
+body.theme-fear {
+  background-color: #1c1c2e;
+  color: #1c1c2e;
+}
+
+body.theme-surprise {
+  background-color: #ffe4b3;
+  color: #1C1C1C;
+}
+
+body.theme-love {
+  background-color: #ffe5ec;
+  color: #2E3A59;
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .left-content {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .right-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .remove-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    float: right;
+    margin: 0.5rem;
+    color: #e94560;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .remove-icon:hover {
+    transform: scale(1.2);
+    color: #ff6b81;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+}
